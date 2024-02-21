@@ -1,0 +1,73 @@
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light grey background */
+  color: #000; /* Black text */
+  display: flex;
+}
+
+/* Left Column */
+.left-column {
+  width: 50%;
+  padding: 20px;
+  background-color: #dcdcdc; /* Light grey background for left column */
+}
+
+.left-column header h1,
+.left-column header h2,
+.left-column section h2 {
+  color: #000; /* Black text for headers */
+}
+
+/* Right Column */
+.right-column {
+  width: 50%;
+  padding: 20px;
+}
+
+/* Specific Section Styles */
+
+#skills ul {
+  list-style-type: circle;
+}
+
+#skills li {
+  margin-bottom: 10px;
+}
+
+#skills li img {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Add some spacing between the image and text */
+}
+
+#experience li,
+#education li,
+#projects li {
+  margin-bottom: 20px;
+}
+
+#contact p {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #8c635c; /* Brown */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  body {
+      flex-direction: column;
+  }
+
+  .left-column, .right-column {
+      width: 100%;
+  }
+}
