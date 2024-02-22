@@ -4,53 +4,44 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; /* Light grey background */
-  color: #000; /* Black text */
+  background-color: #6d5240; /* Light grey background */
+  color: #e6e3e3; /* Black text */
   display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
-/* Left Column */
-.left-column {
-  width: 50%;
+/* General Styles */
+header {
+  text-align: center;
+}
+
+section {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #6d5240; /* Light grey background for sections */
   padding: 20px;
-  background-color: #dcdcdc; /* Light grey background for left column */
 }
 
-.left-column header h1,
-.left-column header h2,
-.left-column section h2 {
+h1, h2, h3 {
   color: #000; /* Black text for headers */
 }
 
-/* Right Column */
-.right-column {
-  width: 50%;
-  padding: 20px;
-}
-
-/* Specific Section Styles */
-
-#skills ul {
+ul {
   list-style-type: circle;
 }
 
-#skills li {
+li {
   margin-bottom: 10px;
 }
 
-#skills li img {
+img {
   width: 30px; /* Adjust size as needed */
   height: auto;
   margin-right: 10px; /* Add some spacing between the image and text */
 }
 
-#experience li,
-#education li,
-#projects li {
-  margin-bottom: 20px;
-}
-
-#contact p {
+p {
   margin-bottom: 10px;
 }
 
@@ -63,11 +54,7 @@ footer {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-  body {
-      flex-direction: column;
-  }
-
-  .left-column, .right-column {
-      width: 100%;
+  section {
+    width: 90%; /* Adjust width for smaller screens */
   }
 }
