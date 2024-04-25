@@ -8,8 +8,10 @@
 }
 body
 {
+  position: relative;
   background-color: lightblue;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -245,6 +247,29 @@ background: #f0f0f0;
   background: #03a9f4;
 }
 
+header {
+  background-color: none;
+  padding: 10px 0;
+}
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #003147;
+  padding: 10px 15px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+nav ul li a:hover{
+transform: translateY(-5px);
+}
 
 
 

@@ -1,160 +1,106 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Responsive Resume using Html & CSS</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="left_Side">
-                <div class="profileText" >
-                    <div class="imgBx">
-                        <img src="images/resume.jpeg" width="200" height="200">
-                        </div>
-                        <h2 class="text-profile">Sifa Kaveza<br><span>Software Engineer</span></h2>
-                        </div>
-                        <div class="contactInfo">
-                            <h3 class="title"> Contact Info</h3>
-                            <ul>
-                                <li>
-                                    <span class="icon"></span>
-                                    <span class="text">+254 743 251 659</span>
-                                </li>
-                            <li>
-                                <span class="icon"></span>
-                                <span class="text">sifakaveza@gmail.com</span>
-                            </li>
-                            <li>
-                                <span class="icon"></span>
-                                <a href ="https://www.linkedin.com/in/sifa-mwachoni/" class="text" target="_blank"> LinkedIn</a>
-                            </li>
-                            <li>
-                                <span class="icon"></span>
-                                <span class="text">Kigali, Rwanda</span>
-                            </li>
-                            </ul>
-                        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        *{
+            box-sizing: none;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            
+        }
 
-                        <div class="contactInfo education">
-                            <h3 class="title">Education</h3>
-                            <ul>
-                                <li>
-                                    <h5>2023-2026</h5>
-                                    <h4>Bachelor of Science in Software Engineering</h4>
-                                    <h4>The African Leadership University</h4>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="contactInfo language">
-                            <h3 class="title">Languages</h3>
-                            <ul>
-                               
-                                <li>
-                                    <span class="text">English</span>
-                                    <span class="percent">
-                                    <div style="width: 100%;"></div>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="text">Kiswahili</span>
-                                    <span class="percent">
-                                    <div style="width: 85%;"></div>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="text">French</span>
-                                    <span class="percent">
-                                    <div style="width: 32%;"></div>
-                                    </span>
-                                </li>
-                                </ul>
-                                </div>
-                                    
-                    </div>
-                <div class="right_Side">
-                    <div class="about">
-                    <h2 class="title2">Profile</h2>
-                    <p> As a Software Engineer, I'm on a continuous journey of growth and learning. My passion for technology fuels my desire to make a positive global impact, addressing challenges while fostering job creation, education and healthcare. I'm dedicated to honing my skills and collaborating with like-minded professionals to drive innovation.</p>
-                        </p>
-                    </div>
-                    <div class="about">
-                        <h2 class="title2">Experience</h2>
-                        <p></p>
-                        <div class="box">
-                            <div class="year_company">
-                                <h5>March 2023</h5>
-                                <h5>African Leadership University</h5>
-                            </div>
-                            <div class="text">
-                                <h4>Culture Week Management Volunteer</h4>
-                                <p>Worked in the tech team to</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="year_company">
-                                <h5>May 2023, August 2023</h5>
-                                <h5>African Leadership University</h5>
-                            </div>
-                            <div class="text">
-                                <h4>Matriculation Volunteer</h4>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="year_company">
-                                <h5>January 2024</h5>
-                                <h5>African Leadership University</h5>
-                            </div>
-                            <div class="text">
-                                <h4>Code Xtreme Hackathon Volunteer</h4>
-                                <p></p>
-                                    
-                                    
-                            </div>
-                        </div>
-                    </div>
+        header {
+            background-color: none;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #95b9c9;
+            padding: 10px 15px;
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        nav ul li a:hover{
+            transform: translateY(-5px);
+        }
+        .huge-container {
+            background-color: lightblue;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+            
 
-                    <div class="about skills">
-                    <h2 class="title2">Professional Skills</h2>
-                    <div class="box">
-                        <h4>Html</h4>
-                        <div class="percent">
-                            <div style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <h4>CSS</h4>
-                        <span class="percent">
-                            <div style="width: 90%;  "></div>
-                        </span>
-                        
-                    </div>
-                    <div class="box">
-                        <h4>Python</h4>
-                        <div class="percent"><div style="width: 65%;"></div></div>
-                        
-                    </div>
-                    <div class="box">
-                        <h4>Javascript</h4>
-                        <div class="percent">
-                            <div class="percentage" style="width: 65%;"></div>
-                        </div>
-                        
-                    </div>
-                    </div>
-                    <div class="about interest">
-                        <h2 class="title2">Interest</h2>
-                        <ul>
-                            <li>Healthcare</li>
-                            <li>Robotics</li>
-                            <li>Game Devlopment</li>
-                            <li>Artificial Intelligence</li>
-                        </ul>
-                    </div>
-                    
+        }
+        .inner-container {
+            padding: 20px;
+            height: 83vh;
+            width: 90vw;
+            background-color: #003147;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+        }
+        .inner-container{
+            display: flex;
+        }
+        .text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start ; 
+            align-items: center; 
+            padding-right: 20px;
+            margin-top: 20px;
+            color:white;
+         }
+ 
+    </style>
+</head>
+<body>
 
-                    </div>
+    <div class="huge-container">
+        <div class="inner-container">
+            <div class="text">
+                <h2>Welcome to Sifa's Portfolio!</h2>
+                <p>I'm a Software Engineer currently based in Kigali Rwanda, passionate about web development, web design and healthcare.</p>
+                 <p>My mission is to use technology to better the healthcare system in Africa while also advocating for job creation and increased access to quality education. </p> 
+                 </div>
+                 
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="CV.html">CV</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="About me.html">About me</a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
-    </body>
+    </div>
+</body>
 </html>
