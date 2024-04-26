@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         *{
             box-sizing: none;
             padding: 0;
             margin: 0;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", sans-serif;
             margin: 0;
             padding: 0;
             background-color: white;
             height: 100vh;
             width: 100vw;
+            scroll-behavior: smooth;
+            overflow-y: hidden;
+
             
         }
 
@@ -30,7 +34,7 @@
         }
         nav ul li {
             display: inline;
-            margin-right: 20px;
+            padding-right: 10px;
         }
         nav ul li a {
             text-decoration: none;
@@ -39,9 +43,13 @@
             position: relative;
             display: inline-block;
             transition: transform 0.3s ease;
+            font-size: 1.2em;
+
         }
+
         nav ul li a:hover{
             transform: translateY(-5px);
+            color: plum;
         }
         .huge-container {
             background-color: lightblue;
@@ -51,8 +59,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: center;    
-            align-items: center;
-            
+            align-items: center;          
 
         }
         .inner-container {
@@ -66,40 +73,198 @@
         }
         .inner-container{
             display: flex;
+            flex-direction: column;
+        }
+        .body-content{
+            display: flex;
+            flex-flow: wrap;
+            height: 100%;
+            width: 50%;
         }
         .text {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start ; 
+            justify-content: center ; 
             align-items: center; 
             padding-right: 20px;
-            margin-top: 20px;
+            margin-left: 5rem;
+            margin-bottom: 15rem;
             color:white;
+            text-align: start;
          }
- 
+         .text h2{
+            font-size: 3.5em;
+            align-self: flex-start;
+         }
+         .text p{
+            opacity: .5;
+         }
+         .body-content .image-me{
+            position: absolute;
+            right: 5%;
+            bottom: 20;
+         }
+         .body-content .image-flower{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+         }
+        .image-flower2{
+            position:absolute;
+            bottom: 0;
+            left: 0;
+         }
+        .empty-space-text{
+            height: 3rem;
+        }
+        .text .intouch{
+            opacity: 1;
+            font-size: x-large;
+            align-self: flex-start;
+        }
+        .kaveza{
+            background-image: url(images/waves.jpg);
+            background-size:cover;
+            background-clip: text;
+            color: transparent;
+        }
+        .socials{
+            display: flex;
+            gap: 1rem;
+            justify-content: start;
+            align-self: flex-start;
+
+        }
+        .emailme{
+            position: absolute;
+            bottom: 10%;
+            right: 7%;
+        }
+        .underline{
+            color: transparent;
+            background-clip:padding-box;
+            margin-left: -10rem;
+        }
+        .arrow{
+            position: absolute;
+            bottom: 19%;
+            right: 3%;
+            
+        }
+        .emailme p{
+            opacity: 1;
+            text-decoration: underline;
+            font-size: 14px;
+            text-align: center;
+        }
+        /* animation */
+        .socials-mail,
+        .socials-instagram,
+        .socials-linkedin {
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .socials-mail:hover,
+        .socials-instagram:hover,
+        .socials-linkedin:hover {
+            transform: scale(1.1); /* Scale the image by 10% */
+        }
+
+        .socials-mail,
+        .socials-instagram,
+        .socials-linkedin{
+            transform: scale(1); /* Reset the scale to normal */
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .image-me {
+            animation: slideIn 0.5s ease forwards, scaleUp 0.5s ease forwards 0.5s;
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .image-me:hover {
+            transform: scale(1.1); /* Scale the image by 10% */
+        }
+        .arrow {
+            animation: pendulum 2s ease infinite;
+        }
+
+        @keyframes pendulum {
+            0% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="huge-container">
         <div class="inner-container">
-            <div class="text">
-                <h2>Welcome to Sifa's Portfolio!</h2>
-                <p>I'm a Software Engineer currently based in Kigali Rwanda, passionate about web development, web design and healthcare.</p>
-                 <p>My mission is to use technology to better the healthcare system in Africa while also advocating for job creation and increased access to quality education. </p> 
-                 </div>
-                 
             <header>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="CV.html">CV</a></li>
+                        <li><a href="CV.html">Resume</a></li>
                         <li><a href="Projects.html">Projects</a></li>
-                        <li><a href="About me.html">About me</a></li>
                     </ul>
                 </nav>
             </header>
+            <div class="body-content">
+                <div class="text">
+                    <h2>Hey, <br>I'm<span class="kaveza"> Kaveza</span>! 🥰</h2>
+                    <img src="/images/underline.png" height="50" width="70%" class="underline">
+                    <p><br>I'm a Software Engineer currently based in Kigali Rwanda, passionate about web development, web design and healthcare.</p>
+                     <p>My mission is to use technology to better the healthcare system in Africa while also advocating for job creation and increased access to quality education. </p> 
+                     <div class="empty-space-text"></div>
+                     <p class="intouch">Let's get in touch? </p>
+                     <div class="socials">
+                        <a><img src="images/linkedin.png" height="50" class="socials-linkedin"></a>
+                        <a><img src="images/instagram.png" height="50"class="socials-instagram"></a>
+                     </div>
+                     <img class="arrow" src="images/arrow.png" height="200">
+                     <div class="emailme">
+                        <a><img  src="images/social.png" height="58" class="socials-mail"></a>
+                        <p>Hire me!</p>
+                     </div>
+                </div>
+                     
+                <div class="image-me">
+                    <img src="images/resume.png" height="700">
+                </div>
+                <div class="image-flower">
+                    <img src="images/flower.png" height="300">
+                </div>
+
+            </div>
+        </div>
+        <div class="image-flower2">
+            <img src="images/flowers2.png" height="200">
         </div>
     </div>
 </body>
